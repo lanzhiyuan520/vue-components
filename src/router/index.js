@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '@/components/index'
 import LanButton from '../components/lan-button-view'
 import LanLoading from '../components/lan-loading-view'
+import LanToast from '../components/lan-toast-view'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path : '/lan-loading',
       name : 'lan-loading-view',
       component : LanLoading
+    },
+    {
+      path : '/lan-toast',
+      name : 'lan-toast-view',
+      component : LanToast
     }
   ]
 })

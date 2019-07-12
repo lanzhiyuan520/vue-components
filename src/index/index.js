@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Button from '../../packages/button'
 import ButtonGroup from '../../packages/button-group'
 import Loading from '../../packages/loading'
+import Toast from '../../packages/toast'
 const components = [
   Button,
   ButtonGroup,
@@ -9,6 +10,7 @@ const components = [
 
 const install = (Vue) => {
   Vue.use(Loading)
+  Vue.use(Toast)
   components.forEach((component) => {
     Vue.component(component.name,component)
   })

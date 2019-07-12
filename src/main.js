@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import Toast from './packages/toast/'
 import componentsIndex from './index'
 Vue.use(componentsIndex)
 
