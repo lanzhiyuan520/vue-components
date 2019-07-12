@@ -6,7 +6,7 @@ import router from './router'
 import Toast from './packages/toast/'
 import componentsIndex from './index'
 Vue.use(componentsIndex)
-Vue.use(Toast)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

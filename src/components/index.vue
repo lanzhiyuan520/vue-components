@@ -1,6 +1,7 @@
 <template>
   <div class="index" >
-    <lan-button type="primary" @click="goButton">按钮</lan-button>
+    <lan-button type="primary" @click="goButton('/lan-button')">按钮</lan-button>
+    <lan-button type="primary" @click="goButton('/lan-loading')">loading</lan-button>
   </div>
 </template>
 
@@ -17,8 +18,8 @@ export default {
 
   },
   methods : {
-    goButton () {
-      this.$router.push('/lan-button')
+    goButton (path) {
+      this.$router.push(path)
     }
   }
 }
