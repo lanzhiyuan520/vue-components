@@ -1,8 +1,9 @@
 <template>
     <div style="margin: 10px">
-      <lan-button type="primary" @click="show">普通toast</lan-button>
+      <lan-button @click="show">普通toast</lan-button>
       <lan-button type="primary" @click="showLoadingToast">带loading的toast</lan-button>
-      <lan-button type="primary" @click="showIconToast">带icon的toast</lan-button>
+      <lan-button type="success" @click="showIconToast">带icon的toast</lan-button>
+      <lan-button type="danger" plain @click="showIconErrorToast">带icon的toast</lan-button>
       <div style="margin: 10px">
         调用方式 this.$toast(object|string) <br />
         string (显示的文本) <br />
@@ -34,6 +35,13 @@
               text : '成功',
               duration : 5000,
               icon : 'icon-success'
+            })
+          },
+          showIconErrorToast () {
+            this.$toast({
+              text : '失败',
+              duration : 5000,
+              icon : 'icon-error'
             })
           }
         }
