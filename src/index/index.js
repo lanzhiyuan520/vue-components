@@ -3,9 +3,11 @@ import Button from '../../packages/button'
 import ButtonGroup from '../../packages/button-group'
 import Loading from '../../packages/loading'
 import Toast from '../../packages/toast'
+import Input from '../../packages/input'
 const components = [
   Button,
   ButtonGroup,
+  Input
 ]
 
 const install = (Vue) => {

@@ -3,6 +3,7 @@
     <lan-button type="primary" @click="goButton('/lan-button')">按钮</lan-button>
     <lan-button type="primary" @click="goButton('/lan-loading')">loading</lan-button>
     <lan-button type="primary" @click="goButton('/lan-toast')">toast</lan-button>
+    <lan-button type="primary" @click="goButton('/lan-input')">input</lan-button>
   </div>
 </template>
 
