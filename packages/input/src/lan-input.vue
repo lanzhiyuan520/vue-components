@@ -152,7 +152,7 @@
         }
       },
       mounted () {
-          
+
       }
     }
 </script>
