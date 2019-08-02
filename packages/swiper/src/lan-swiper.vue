@@ -8,12 +8,20 @@
     >
       <slot></slot>
       <transition name="btn-animating-prev">
-        <button v-if="showArrow" @click="prev" class="prevbtn" >
+        <button
+          v-if="showArrow"
+          @click="prev(true)"
+          class="prevbtn"
+        >
           <i class="iconfont icon-zuojiantou"></i>
         </button>
       </transition>
       <transition  name="btn-animating-next">
-        <button v-if="showArrow" @click="next" class="nextbtn" >
+        <button
+          v-if="showArrow"
+          @click="next(true)"
+          class="nextbtn"
+        >
           <i class="iconfont icon-jiantou"></i>
         </button>
       </transition>
@@ -65,7 +73,8 @@
           swiperItem : [],
           activeIndex : 0,
           oldIndex : -1,
-          showArrow : false
+          showArrow : false,
+          flag : true
         }
       },
       watch : {
@@ -87,8 +96,10 @@
           if (this.trigger !== 'hover') return ;
           this.activeIndex = i
         },
-        next () {
-          if (this.showArrow && this.autoplay) return ;
+        next (flag) {
+          if (!flag) {
+            if (this.showArrow && this.autoplay) return ;
+          }
           this.activeIndex += 1
           if (this.activeIndex >= this.swiperItemLength()) {
             this.activeIndex = 0

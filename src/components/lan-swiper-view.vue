@@ -28,7 +28,7 @@
       <div style="width: 820px;margin: 10px auto;">
         <p>自动轮播</p>
         <p>interval:轮播时间(毫秒) 默认：3000</p>
-        <lan-swiper  autoplay interval="1000">
+        <lan-swiper  autoplay :interval="1000">
           <lan-swiper-item v-for="(item,index) in swiper" :key="index">
             <div class="test" :style="{background:item.bgc}">{{item.title}}</div>
           </lan-swiper-item>
