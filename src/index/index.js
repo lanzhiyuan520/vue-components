@@ -4,10 +4,14 @@ import ButtonGroup from '../../packages/button-group'
 import Loading from '../../packages/loading'
 import Toast from '../../packages/toast'
 import Input from '../../packages/input'
+import Swiper from '../../packages/swiper'
+import SwiperItem from '../../packages/swiper-item'
 const components = [
   Button,
   ButtonGroup,
-  Input
+  Input,
+  Swiper,
+  SwiperItem
 ]
 
 const install = (Vue) => {

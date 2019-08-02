@@ -4,7 +4,7 @@
       <lan-input @focus="inputFocus" @blur="inputBlur" placeholder="icon在后边" @change="inputChange" suffix-icon="icon-set" ></lan-input>
     </div>
     <div style="width: 180px;margin-bottom: 10px">
-      <lan-input  @focus="inputFocus" @blur="inputBlur" placeholder="字数限制" @change="inputChange" show-word-limit maxlength="10" ></lan-input>
+      <lan-input  @focus="inputFocus" v-model="input2" @blur="inputBlur" placeholder="字数限制" @change="inputChange" show-word-limit maxlength="10" ></lan-input>
     </div>
     <div style="width: 180px;margin-bottom: 10px">
       <lan-input v-model="input" @focus="inputFocus" @blur="inputBlur" placeholder="带清空按钮" @change="inputChange" clearable ></lan-input>
@@ -42,7 +42,8 @@
         name: "lan-input-view",
         data () {
           return {
-            input : ''
+            input : '',
+            input2 : ''
           }
         },
         methods : {

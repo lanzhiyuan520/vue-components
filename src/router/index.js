@@ -5,6 +5,7 @@ import LanButton from '../components/lan-button-view'
 import LanLoading from '../components/lan-loading-view'
 import LanToast from '../components/lan-toast-view'
 import LanInput from '../components/lan-input-view'
+import LanSwiper from '../components/lan-swiper-view'
 Vue.use(Router)
 
 export default new Router({
@@ -34,6 +35,11 @@ export default new Router({
       path : '/lan-input',
       name : 'lan-input-view',
       component : LanInput
+    },
+    {
+      path : '/lan-swiper',
+      name : 'lan-swiper-view',
+      component : LanSwiper
     }
   ]
 })
