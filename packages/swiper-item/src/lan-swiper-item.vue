@@ -52,7 +52,7 @@
           let length = this.$parent.swiperItemLength()
           this.parentWidth = this.$parent.$el.clientWidth
           this.animating = activeIndex === index || index === oldIndex
-          index = this.changeIndex(index,activeIndex,length)
+          index = length === 1 ? 0 : this.changeIndex(index,activeIndex,length)
           this.translate = this.calcTranslate(index,activeIndex)
         },
 
