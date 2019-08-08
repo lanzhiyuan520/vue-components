@@ -6,12 +6,14 @@ import Toast from '../../packages/toast'
 import Input from '../../packages/input'
 import Swiper from '../../packages/swiper'
 import SwiperItem from '../../packages/swiper-item'
+import Radio from '../../packages/radio'
 const components = [
   Button,
   ButtonGroup,
   Input,
   Swiper,
-  SwiperItem
+  SwiperItem,
+  Radio
 ]
 
 const install = (Vue) => {

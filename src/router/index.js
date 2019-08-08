@@ -6,6 +6,7 @@ import LanLoading from '../components/lan-loading-view'
 import LanToast from '../components/lan-toast-view'
 import LanInput from '../components/lan-input-view'
 import LanSwiper from '../components/lan-swiper-view'
+import LanRadio from '../components/lan-radio-view'
 Vue.use(Router)
 
 export default new Router({
@@ -40,6 +41,11 @@ export default new Router({
       path : '/lan-swiper',
       name : 'lan-swiper-view',
       component : LanSwiper
+    },
+    {
+      path : '/lan-radio',
+      name : 'lan-radio-view',
+      component : LanRadio
     }
   ]
 })

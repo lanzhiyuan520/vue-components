@@ -5,6 +5,7 @@
     <lan-button type="primary" @click="goButton('/lan-toast')">toast</lan-button>
     <lan-button type="primary" @click="goButton('/lan-input')">input</lan-button>
     <lan-button type="primary" @click="goButton('/lan-swiper')">swiper</lan-button>
+    <lan-button type="primary" @click="goButton('/lan-radio')">radio</lan-button>
   </div>
 </template>
 
