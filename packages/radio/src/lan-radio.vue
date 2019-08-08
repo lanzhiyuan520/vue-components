@@ -20,7 +20,9 @@
     >
       <span
         class="lan-radio-inner"
-        :style="model === label? fillStyle:null"
+        :style="[model === label? fillStyle:null,hoverStyle?hoverStyle:'']"
+        @mouseenter="changBorderColor"
+        @mouseout="hoverStyle=null"
       ></span>
       <input
         type="radio"
@@ -55,7 +57,7 @@
         },
         data () {
           return {
-
+            hoverStyle : null
           }
         },
         computed : {
@@ -74,18 +76,24 @@
           },
           fillStyle () {
             return {
-              backgroundColor : this.fill
+              backgroundColor : this.fill,
+              border : `1px solid ${this.fill}`
             }
           }
         },
         mounted () {
-          console.log(this)
+
         },
         methods : {
           handleChange () {
             this.$nextTick(()=>{
               this.$emit('change',this.model)
             })
+          },
+          changBorderColor () {
+            this.hoverStyle = {
+              border: `1px solid ${this.fill}`
+            }
           }
         }
 
@@ -131,6 +139,9 @@
         box-sizing: border-box;
         white-space: nowrap;
         background-color: #fff;
+      }
+      &>.lan-radio-inner:hover {
+        border: 1px solid $color-409;
       }
       &>.lan-radio-inner:after {
         width: 4px;
