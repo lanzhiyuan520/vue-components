@@ -7,6 +7,8 @@ import LanToast from '../components/lan-toast-view'
 import LanInput from '../components/lan-input-view'
 import LanSwiper from '../components/lan-swiper-view'
 import LanRadio from '../components/lan-radio-view'
+import LanCheckbox from '../components/lan-checkbox-view'
+
 Vue.use(Router)
 
 export default new Router({
@@ -46,6 +48,11 @@ export default new Router({
       path : '/lan-radio',
       name : 'lan-radio-view',
       component : LanRadio
+    },
+    {
+      path : '/lan-checkbox',
+      name : 'lan-checkbox-view',
+      component : LanCheckbox
     }
   ]
 })
