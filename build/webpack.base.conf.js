@@ -13,7 +13,8 @@ console.log(process.env.NODE_ENV)
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/index/index.js'
+    //app: './src/index/index.js'
+    app: './src/main.js'
   },
   output: {
     path: config.build.assetsRoot,
