@@ -4,8 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import componentsIndex from './index'
+import bus from './utils/bus'
 Vue.use(componentsIndex)
 
+
+Vue.prototype.$bus = bus
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

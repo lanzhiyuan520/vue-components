@@ -8,6 +8,7 @@ import Swiper from '../../packages/swiper'
 import SwiperItem from '../../packages/swiper-item'
 import Radio from '../../packages/radio'
 import Checkbox from '../../packages/checkbox'
+import CheckboxGroup from '../../packages/checkbox-group'
 
 const components = [
   Button,
@@ -16,7 +17,8 @@ const components = [
   Swiper,
   SwiperItem,
   Radio,
-  Checkbox
+  Checkbox,
+  CheckboxGroup
 ]
 
 const install = (Vue) => {

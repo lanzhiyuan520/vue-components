@@ -17,7 +17,7 @@
     >
       <span
         class="lan-checkbox-inner"
-        :style="[model?checkboxStyle:null,hoverStyle]"
+        :style="[isChecked?checkboxStyle:null,hoverStyle]"
         @mouseenter="changBorderColor"
         @mouseout="hoverStyle=null"
       ></span>
@@ -30,7 +30,7 @@
     </span>
     <span
       class="lan-checkbox-label"
-      :style="model?textColorStyle:null"
+      :style="isChecked?textColorStyle:null"
     >
       <slot>备选项</slot>
     </span>
@@ -43,7 +43,8 @@
       props : {
         value : {},
         textColor : String,
-        checkboxColor : String
+        checkboxColor : String,
+        label : String
       },
       data () {
         return {
@@ -53,14 +54,35 @@
       computed : {
         model : {
           get () {
-            return this.value
+            return this.isGroup? this._checkBoxGroup.value:this.value
           },
           set (val) {
-            this.$emit('input',val)
+            if (!this.isGroup) {
+              this.$emit('input',val)
+            }
           }
         },
         isChecked () {
-          return this.model
+          if (this.isGroup) {
+            let indexFlag = this.model.indexOf(this.label)
+            if (!this.label) {
+              return false
+            } else if (indexFlag < 0) {
+              return false
+            } else if (indexFlag >= 0) {
+              return true
+            }
+          } else {
+            return this.model
+          }
+        },
+        isGroup () {
+          let parent = this.$parent
+          if (parent.$options.componentName === 'lan-checkbox-group') {
+            this._checkBoxGroup = parent
+            return true
+          }
+          return false
         },
         textColorStyle () {
           return {
@@ -70,7 +92,7 @@
         checkboxStyle () {
           return {
             backgroundColor: this.checkboxColor,
-            borderColor: this.checkboxColor
+            border: `1px solid ${this.checkboxColor}`
           }
         }
       },
@@ -79,9 +101,22 @@
           this.checkboxColor ? this.hoverStyle = { border : `1px solid ${this.checkboxColor}` }:this.hoverStyle = null
         },
         handleChange () {
-          this.$emit('change',!this.model)
-        }
-      }
+          if (!this.isGroup) {
+            this.$emit('change',!this.model)
+          }else {
+            if (this.isChecked) {
+              var value = this._checkBoxGroup.value.filter(item => item !== this.label)
+            }else {
+              var value = this.model
+              value.push(this.label)
+            }
+            this.$bus.$emit('changeValue',value)
+          }
+        },
+      },
+      mounted () {
+
+      },
     }
 </script>
 

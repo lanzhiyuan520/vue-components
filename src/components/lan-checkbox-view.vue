@@ -15,6 +15,15 @@
       <p>当前状态:{{checked3?'选中':'未选中'}}</p>
       <lan-checkbox v-model="checked3" @change="test"></lan-checkbox>
     </div>
+    <div style="text-align: center;margin-top: 20px">
+      <p>多选组</p>
+      <p>当前选中:{{checked4}}</p>
+      <lan-checkbox-group v-model="checked4" @change="test2">
+        <lan-checkbox label="a" checkbox-color="yellowgreen" text-color="blue">多选1</lan-checkbox>
+        <lan-checkbox label="b">多选2</lan-checkbox>
+        <lan-checkbox label="c">多选3</lan-checkbox>
+      </lan-checkbox-group>
+    </div>
   </div>
 </template>
 
@@ -25,12 +34,16 @@
         return {
           checked : true,
           checked2 : true,
-          checked3 : true
+          checked3 : true,
+          checked4 : ['a']
         }
       },
       methods : {
         test (val) {
           this.checked3 = val
+        },
+        test2 (val) {
+          console.log(val)
         }
       }
     }
