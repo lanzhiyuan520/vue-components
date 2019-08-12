@@ -3,7 +3,8 @@
     class="lan-checkbox"
     :class="[
       {
-        'is-checked':isChecked
+        'is-checked':isChecked,
+        'is-disabled' : disabled
       }
     ]"
   >
@@ -11,7 +12,8 @@
       class="lan-checkbox-input"
       :class="[
         {
-          'is-checked':isChecked
+          'is-checked':isChecked,
+          'is-disabled' : disabled
         }
       ]"
     >
@@ -25,6 +27,7 @@
         type="checkbox"
         class="lan-checkbox-original"
         v-model="model"
+        :disabled='disabled'
         @change="handleChange"
       >
     </span>
@@ -44,7 +47,11 @@
         value : {},
         textColor : String,
         checkboxColor : String,
-        label : String
+        label : String,
+        disabled : {
+          type : Boolean,
+          default : false
+        }
       },
       data () {
         return {
@@ -185,6 +192,7 @@
         width: 3px;
         transition: transform .15s ease-in .05s;
         transform-origin: center;
+        transform: rotate(45deg) scaleY(0);
       }
       &>.lan-checkbox-original{
         opacity: 0;
@@ -204,6 +212,24 @@
       padding-left: 10px;
       line-height: 19px;
       font-size: 14px;
+    }
+
+  }
+  .lan-checkbox.is-disabled {
+    &>.lan-checkbox-input.is-disabled {
+      &>.lan-checkbox-inner {
+        background-color: #edf2fc;
+        border-color: #dcdfe6;
+        cursor: not-allowed;
+      }
+      &>.lan-checkbox-inner:after {
+        cursor: not-allowed;
+        border-color: #c0c4cc;
+
+      }
+    }
+    &>.lan-checkbox-label {
+      cursor: not-allowed;
     }
   }
 </style>

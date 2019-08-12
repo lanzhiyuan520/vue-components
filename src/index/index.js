@@ -9,6 +9,7 @@ import SwiperItem from '../../packages/swiper-item'
 import Radio from '../../packages/radio'
 import Checkbox from '../../packages/checkbox'
 import CheckboxGroup from '../../packages/checkbox-group'
+import Switch from '../../packages/switch'
 
 const components = [
   Button,
@@ -18,7 +19,8 @@ const components = [
   SwiperItem,
   Radio,
   Checkbox,
-  CheckboxGroup
+  CheckboxGroup,
+  Switch
 ]
 
 const install = (Vue) => {
@@ -42,5 +44,6 @@ export default {
   lanSwiperItem : SwiperItem,
   lanRadio : Radio,
   lanCheckbox : Checkbox,
-  lanCheckboxGroup : CheckboxGroup
+  lanCheckboxGroup : CheckboxGroup,
+  lanSwitch : Switch
 }

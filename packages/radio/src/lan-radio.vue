@@ -191,7 +191,6 @@
       }
       &>.lan-radio-inner:after {
         background-color: #c0c4cc;
-
       }
     }
     &>.lan-radio-label-text {

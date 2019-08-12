@@ -11,6 +11,16 @@
       <lan-checkbox v-model="checked2" text-color="red" checkbox-color="yellowgreen"></lan-checkbox>
     </div>
     <div style="text-align: center;margin-top: 20px">
+      <p>禁用(选中禁用)</p>
+      <p>disabled(Boolean)</p>
+      <lan-checkbox v-model="checked5" disabled></lan-checkbox>
+    </div>
+    <div style="text-align: center;margin-top: 20px">
+      <p>禁用(未选中禁用)</p>
+      <p>disabled(Boolean)</p>
+      <lan-checkbox v-model="checked6" disabled></lan-checkbox>
+    </div>
+    <div style="text-align: center;margin-top: 20px">
       <p>更改值时事件 change</p>
       <p>当前状态:{{checked3?'选中':'未选中'}}</p>
       <lan-checkbox v-model="checked3" @change="test"></lan-checkbox>
@@ -35,7 +45,9 @@
           checked : true,
           checked2 : true,
           checked3 : true,
-          checked4 : ['a']
+          checked4 : ['a'],
+          checked5 : true,
+          checked6 : false
         }
       },
       methods : {
