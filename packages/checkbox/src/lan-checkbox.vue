@@ -225,7 +225,6 @@
       &>.lan-checkbox-inner:after {
         cursor: not-allowed;
         border-color: #c0c4cc;
-
       }
     }
     &>.lan-checkbox-label {
