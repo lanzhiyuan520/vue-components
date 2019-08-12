@@ -1,9 +1,10 @@
 {
-  "name": "vue-components",
-  "version": "1.0.0",
+  "name": "lan-components",
+  "version": "1.0.6",
   "description": "A Vue.js project",
-  "author": "",
-  "private": true,
+  "author": "lanzhiyuan99@126.com",
+  "private": false,
+  "main":"dist/static/js/lan-components.app.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",

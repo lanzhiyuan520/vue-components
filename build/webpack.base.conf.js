@@ -13,11 +13,14 @@ console.log(process.env.NODE_ENV)
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: './src/index/index.js'
   },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
+    library: 'lan-components',
+    libraryTarget: "umd",
+    umdNamedDefine: true,
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
