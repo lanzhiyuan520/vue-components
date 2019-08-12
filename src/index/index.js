@@ -29,4 +29,18 @@ const install = (Vue) => {
   })
 }
 
-export default install
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue);
+}
+
+export default {
+  install,
+  lanButton : Button,
+  lanButtonGroup : ButtonGroup,
+  lanInput : Input,
+  lanSwiper : Swiper,
+  lanSwiperItem : SwiperItem,
+  lanRadio : Radio,
+  lanCheckbox : Checkbox,
+  lanCheckboxGroup : CheckboxGroup
+}
