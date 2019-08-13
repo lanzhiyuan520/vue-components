@@ -14,7 +14,6 @@
         :disabled="disabled"
         @change="handleChange"
       >
-      <span v-if="activePrevValue">{{activePrevValue}}</span>
       <span
        class="lan-switch-core"
        :class="[
@@ -31,6 +30,7 @@
       >{{activeNextValue}}</span>
       <span
         v-else="activeNextValue"
+        :style="[getCloseTextColor]"
       >{{inactiveNextValue}}</span>
     </div>
 </template>
@@ -47,10 +47,10 @@
         },
         activeNextValue : String,
         inactiveNextValue : String,
-        activePrevValue : String,
         activeTextColor : String,
+        closeTextColor : String,
         activeSwitchColor : String,
-        closeSwitchColor : String
+        closeSwitchColor : String,
       },
       data () {
         return {
@@ -79,16 +79,14 @@
           }
         },
         getActiveTextColor () {
-          // if (this.activeTextColor) {
-          //   return {
-          //     color : this.activeTextColor
-          //   }
-          // }
           return this.activeTextColor ? {color : this.activeTextColor} : ''
+        },
+        getCloseTextColor () {
+          return this.closeTextColor ? { color : this.closeTextColor } : ''
         }
       },
       methods : {
-        handleChange (val) {
+        handleChange () {
           this.$emit('change',!this.model)
         }
       }
