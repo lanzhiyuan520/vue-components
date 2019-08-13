@@ -1,5 +1,5 @@
 <template>
-  <div style="margin: 10px;">-->
+  <div style="margin: 10px;">
     <h2>基础用法</h2>
     <div style="margin-bottom: 10px">
       <lan-button>默认按钮</lan-button>
