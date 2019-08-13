@@ -133,7 +133,7 @@
 </template>
 
 <script>
-  import MarkdownItVue from 'markdown-it-vue'
+  // import MarkdownItVue from 'markdown-it-vue'
   // import doc from '../example/button'
   import doc from '../mdfile/button.md'
   export default {
