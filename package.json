@@ -4,7 +4,7 @@
   "description": "A Vue.js project",
   "author": "lanzhiyuan99@126.com",
   "private": false,
-  "main":"dist/static/js/lan-components.app.js",
+  "main": "dist/static/js/lan-components.app.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -14,8 +14,19 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "highlight": "^0.2.4",
+    "html-loader": "^0.5.5",
+    "markdown-it": "^9.1.0",
+    "markdown-it-anchor": "^5.2.4",
+    "markdown-it-container": "^2.0.0",
+    "markdown-it-vue": "^1.0.9",
     "node-sass": "^4.12.0",
+    "showdown": "^1.9.0",
+    "striptags": "^3.1.1",
+    "transliteration": "^2.1.5",
     "vue": "^2.5.2",
+    "vue-markdown-loader": "^2.4.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

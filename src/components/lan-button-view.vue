@@ -1,5 +1,5 @@
 <template>
-  <div style="margin: 10px;">
+  <div style="margin: 10px;">-->
     <h2>基础用法</h2>
     <div style="margin-bottom: 10px">
       <lan-button>默认按钮</lan-button>
@@ -127,14 +127,41 @@
       </div>
     </div>
   </div>
+  <!--<div>-->
+    <!--<markdown-it-vue class="md-body" :content='content' :options="options"></markdown-it-vue>-->
+  <!--</div>-->
 </template>
 
 <script>
-    export default {
-        name: "lan-button-view"
+  import MarkdownItVue from 'markdown-it-vue'
+  // import doc from '../example/button'
+  import doc from '../mdfile/button.md'
+  export default {
+    name: "lan-button-view",
+    data () {
+      return {
+        content: doc,
+        options: {
+          markdownIt: {
+            linkify: true,
+            html : true
+          },
+          linkAttributes: {
+            target: '_blank',
+            rel: 'noopener'
+          }
+        }
+      }
+    },
+    components : {
+      MarkdownItVue
+    },
+    mounted () {
+      console.log(doc)
     }
+  }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>
