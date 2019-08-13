@@ -5,7 +5,7 @@
 const path = require('path')
 
 module.exports = {
-  is_dev : true,
+  is_dev : false,
   dev: {
 
     // Paths
