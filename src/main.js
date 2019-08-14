@@ -5,15 +5,14 @@ import App from './App'
 import router from './router'
 import componentsIndex from './index'
 import bus from './utils/bus'
-
+import DemoBlock from './components/demo-block'
+import 'highlight.js/styles/color-brewer.css';
 Vue.use(componentsIndex)
+Vue.component('demo-block', DemoBlock);
 
-import 'markdown-it-vue/dist/markdown-it-vue.css'
 
 Vue.prototype.$bus = bus
 Vue.config.productionTip = false
-
-
 
 
 new Vue({
