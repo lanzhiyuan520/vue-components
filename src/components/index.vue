@@ -43,24 +43,28 @@ export default {
           path : '/components/lan-toast'
         },
         {
-          title : 'input',
+          title : 'input 输入框',
           path : '/components/lan-input'
         },
         {
-          title : 'swiper',
+          title : 'swiper 轮播图',
           path : '/components/lan-swiper'
         },
         {
-          title : 'radio',
+          title : 'radio 单选框',
           path : '/components/lan-radio'
         },
         {
-          title : 'checkbox',
+          title : 'checkbox 多选框',
           path : '/components/lan-checkbox'
         },
         {
-          title : 'switch',
+          title : 'switch 开关',
           path : '/components/lan-switch'
+        },
+        {
+          title : 'rate 评分',
+          path : '/components/lan-rate'
         }
       ],
       activeNav : 0

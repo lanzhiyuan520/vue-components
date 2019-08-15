@@ -10,6 +10,7 @@ import Radio from '../../packages/radio'
 import Checkbox from '../../packages/checkbox'
 import CheckboxGroup from '../../packages/checkbox-group'
 import Switch from '../../packages/switch'
+import Rate from '../../packages/rate'
 
 const components = [
   Button,
@@ -20,7 +21,8 @@ const components = [
   Radio,
   Checkbox,
   CheckboxGroup,
-  Switch
+  Switch,
+  Rate
 ]
 
 const install = (Vue) => {
@@ -45,5 +47,6 @@ export default {
   lanRadio : Radio,
   lanCheckbox : Checkbox,
   lanCheckboxGroup : CheckboxGroup,
-  lanSwitch : Switch
+  lanSwitch : Switch,
+  lanRate : Rate
 }

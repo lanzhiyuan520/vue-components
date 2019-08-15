@@ -9,7 +9,7 @@ import LanSwiper from '../components/lan-swiper-view'
 import LanRadio from '../components/lan-radio-view'
 import LanCheckbox from '../components/lan-checkbox-view'
 import LanSwitch from '../components/lan-switch-view'
-
+import LanRate from '../components/lan-rate-view'
 
 Vue.use(Router)
 
@@ -65,6 +65,11 @@ export default new Router({
           path : 'Lan-switch',
           name : 'lan-switch-view',
           component : LanSwitch
+        },
+        {
+          path : 'Lan-rate',
+          name : 'lan-rate-view',
+          component : LanRate
         }
       ]
     }
