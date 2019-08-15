@@ -66,11 +66,15 @@
 <style scoped>
   .lan-swiper-item{
     width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
   }
   .lan-swiper-item.is-animating{
     transition: all .4s linear;
+  }
+  .lan-swiper-item-box {
+    height: 100%;
   }
 </style>

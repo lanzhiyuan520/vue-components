@@ -25,13 +25,18 @@
        :style="[model?getActiveBgcColor:getCloseColor]"
       ></span>
       <span
-        v-if="activeNextValue && model"
-        :style="[model?getActiveTextColor:null]"
-      >{{activeNextValue}}</span>
+        class="lan-switch-text"
+      >
+        <span
+          v-if="activeNextValue && model"
+          :style="[model?getActiveTextColor:null]"
+        >{{activeNextValue}}</span>
       <span
         v-else="activeNextValue"
         :style="[getCloseTextColor]"
       >{{inactiveNextValue}}</span>
+      </span>
+
     </div>
 </template>
 
@@ -139,6 +144,17 @@
       width: 16px;
       height: 16px;
       background-color: #fff;
+    }
+    &>.lan-switch-text {
+      display: inline-block;
+      height: 20px;
+      vertical-align: middle;
+      line-height: 20px;
+      span {
+        line-height: 1;
+        font-size: 14px;
+        display: inline-block;
+      }
     }
   }
   .lan-switch.is-disabled {

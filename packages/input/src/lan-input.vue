@@ -8,6 +8,7 @@
           'is-input-suffix' : suffixIcon,
         }
       ]"
+      :style="{width:maxWidth+'px'}"
       @mouseenter="hovering = true"
       @mouseleave="hovering = false"
     >
@@ -100,6 +101,10 @@
             type : String,
             default: 'off'
           },
+          maxWidth : {
+            type : [String,Number],
+            default : 180
+          },
           autoComplete: {
             type: String,
             validator(val) {
@@ -160,6 +165,7 @@
 <style scoped>
 .lan-input {
   position: relative;
+  display: inline-block;
 }
 .lan-input input {
   background-color: #fff;

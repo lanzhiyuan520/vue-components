@@ -8,11 +8,6 @@
   import buttondoc from '../example/button.md'
   export default {
     name: "lan-button-view",
-    data () {
-      return {
-
-      }
-    },
     components : {
       buttondoc
     }
