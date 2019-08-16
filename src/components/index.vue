@@ -31,6 +31,10 @@ export default {
     return {
       left_nav_list : [
         {
+          title : '安装',
+          path : '/components/install'
+        },
+        {
           title : '按钮',
           path : '/components/lan-button'
         },

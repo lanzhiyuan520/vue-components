@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Install from '../components/install'
 import Index from '@/components/index'
 import LanButton from '../components/lan-button-view'
 import LanLoading from '../components/lan-loading-view'
@@ -26,6 +27,11 @@ export default new Router({
       component: Index,
       redirect : '/components/lan-button',
       children : [
+        {
+          path : 'install',
+          name : 'install',
+          component : Install
+        },
         {
           path : 'lan-button',
           name : 'lan-button-view',
