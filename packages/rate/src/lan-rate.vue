@@ -14,7 +14,8 @@
       ]"
     >
       <i
-        class="iconfont icon-start"
+        class="iconfont"
+        :class="[icon]"
         @mouseenter="startMove(i)"
         @mouseout="startOut"
         @click="handClick(i)"
@@ -45,6 +46,10 @@
         isRead : {
           type : Boolean,
           default : false
+        },
+        icon : {
+          type : String,
+          default : 'icon-start'
         }
       },
       data () {

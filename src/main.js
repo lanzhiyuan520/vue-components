@@ -7,6 +7,7 @@ import componentsIndex from './index'
 import bus from './utils/bus'
 import DemoBlock from './components/demo-block'
 import 'highlight.js/styles/color-brewer.css';
+import './css/icon.css'
 Vue.use(componentsIndex)
 Vue.component('demo-block', DemoBlock);
 

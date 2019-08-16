@@ -2,7 +2,7 @@ import lanToast from './src/lan-toast'
 import Vue from 'vue'
 
 let instance;
-
+let timer;
 let lanToasrConstructor = Vue.extend(lanToast)
 
 instance = new lanToasrConstructor({
@@ -11,6 +11,10 @@ instance = new lanToasrConstructor({
 
 const $toast = (options = {}) => {
   if (instance.visible) return
+  // if (instance.visible) {
+  //   instance.visible = false
+  //   timer = null
+  // }
   instance.visible = true
   switch (typeof options) {
     case 'string' :
@@ -25,7 +29,7 @@ const $toast = (options = {}) => {
       break
   }
   document.body.appendChild(instance.$el)
-  setTimeout(()=>{instance.visible=false},options.duration || instance.duration)
+  timer = setTimeout(()=>{instance.visible=false},options.duration || instance.duration)
 }
 
 instance.$toast = $toast

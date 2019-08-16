@@ -13,6 +13,7 @@
         value : 3,
         value2 : 1,
         value3 : 4,
+        value4 : 4,
         tooltips : ['极差','差','一般','好','极好']
       }
     }
@@ -26,6 +27,15 @@
 ```html
 <div style="margin-top: 5px">
   <lan-rate v-model="value2" :tooltips="tooltips"></lan-rate>
+</div>
+```
+:::
+
+### 自定义icon
+::: demo 自定义icon的样式
+```html
+<div style="margin-top: 2px">
+  <lan-rate v-model="value4" icon="icon-set"></lan-rate>
 </div>
 ```
 :::
@@ -45,6 +55,8 @@
 | v-model   |  绑定的数据  |   Number  |  —  |  —  |
 | isRead  |  是否只读   |   Boolean | true \ false  |  false  |
 | tooltips  |  文案展示  | Array | — |  —  |
+| count  |  星星的数量  | Number | — |  —  |
+| icon  |  icon的类名  | String | — |  icon-start  |
 
 ### 事件
 | 事件名称      | 说明    | 类型      | 可选值       | 参数   |
