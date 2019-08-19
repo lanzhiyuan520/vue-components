@@ -25,7 +25,7 @@ export default new Router({
       path: '/components',
       name: 'index',
       component: Index,
-      redirect : '/components/lan-button',
+      redirect : '/components/install',
       children : [
         {
           path : 'install',
