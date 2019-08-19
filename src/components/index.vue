@@ -69,6 +69,10 @@ export default {
         {
           title : 'rate 评分',
           path : '/components/lan-rate'
+        },
+        {
+          title : 'calendar 日历',
+          path : '/components/lan-calendar'
         }
       ],
       activeNav : 0
