@@ -213,15 +213,15 @@
                 color: #1989fa;
               }
             }
+            td:hover {
+              background-color: #f2f8fe;
+            }
             td {
               display: table-cell;
               border-bottom: 1px solid #ebeef5;
               border-right: 1px solid #ebeef5;
               vertical-align: top;
               transition: background-color .2s ease;
-              &>.lan-calendar-day:hover {
-                background-color: #f2f8fe;
-              }
               &>.lan-calendar-day {
                 box-sizing: border-box;
                 padding: 8px;
