@@ -155,7 +155,7 @@
     }
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
   .lan-progress.lan-progress--circle{
     display: inline-block;
     &>.lan-progress-text{
