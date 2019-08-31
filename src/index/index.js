@@ -13,6 +13,7 @@ import CheckboxGroup from '../../packages/checkbox-group'
 import Switch from '../../packages/switch'
 import Rate from '../../packages/rate'
 import Calendar from '../../packages/calendar'
+import Progress from '../../packages/progress'
 
 const components = [
   Button,
@@ -25,7 +26,8 @@ const components = [
   CheckboxGroup,
   Switch,
   Rate,
-  Calendar
+  Calendar,
+  Progress
 ]
 
 const install = (Vue) => {
@@ -52,5 +54,6 @@ export default {
   lanCheckboxGroup : CheckboxGroup,
   lanSwitch : Switch,
   lanRate : Rate,
-  lanCalendar : Calendar
+  lanCalendar : Calendar,
+  lanProgress : Progress
 }

@@ -12,6 +12,7 @@ import LanCheckbox from '../components/lan-checkbox-view'
 import LanSwitch from '../components/lan-switch-view'
 import LanRate from '../components/lan-rate-view'
 import Lancalendar from '../components/lan-calendar-view'
+import Lanprogress from '../components/lan-progress-view'
 
 Vue.use(Router)
 
@@ -69,19 +70,24 @@ export default new Router({
           component : LanCheckbox
         },
         {
-          path : 'Lan-switch',
+          path : 'lan-switch',
           name : 'lan-switch-view',
           component : LanSwitch
         },
         {
-          path : 'Lan-rate',
+          path : 'lan-rate',
           name : 'lan-rate-view',
           component : LanRate
         },
         {
-          path : 'Lan-calendar',
+          path : 'lan-calendar',
           name : 'lan-calendar-view',
           component : Lancalendar
+        },
+        {
+          path : 'lan-progress',
+          name : 'lan-progress-view',
+          component : Lanprogress
         }
       ]
     }

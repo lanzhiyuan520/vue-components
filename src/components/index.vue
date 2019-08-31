@@ -73,6 +73,10 @@ export default {
         {
           title : 'calendar 日历',
           path : '/components/lan-calendar'
+        },
+        {
+          title : 'progress 进度',
+          path : '/components/lan-progress'
         }
       ],
       activeNav : 0
