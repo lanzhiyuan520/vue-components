@@ -17,6 +17,9 @@ export default {
    margin: 0;
    padding: 0;
  }
+ ul {
+   list-style: none;
+ }
  .hljs {
    line-height: 1.8;
    font-family: Menlo,Monaco,Consolas,Courier,monospace;

@@ -35,7 +35,7 @@ export default {
           path : '/components/install'
         },
         {
-          title : '按钮',
+          title : 'button 按钮',
           path : '/components/lan-button'
         },
         {
@@ -77,6 +77,10 @@ export default {
         {
           title : 'progress 进度',
           path : '/components/lan-progress'
+        },
+        {
+          title : 'icon 图标',
+          path : '/components/lan-icon'
         }
       ],
       activeNav : 0

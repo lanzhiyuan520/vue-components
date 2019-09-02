@@ -13,6 +13,7 @@ import LanSwitch from '../components/lan-switch-view'
 import LanRate from '../components/lan-rate-view'
 import Lancalendar from '../components/lan-calendar-view'
 import Lanprogress from '../components/lan-progress-view'
+import Lanicon from '../components/lan-icon-view'
 
 Vue.use(Router)
 
@@ -88,6 +89,11 @@ export default new Router({
           path : 'lan-progress',
           name : 'lan-progress-view',
           component : Lanprogress
+        },
+        {
+          path : 'lan-icon',
+          name : 'lan-icon-view',
+          component : Lanicon
         }
       ]
     }
